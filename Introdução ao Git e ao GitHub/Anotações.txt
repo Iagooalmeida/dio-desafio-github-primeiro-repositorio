@@ -1,0 +1,18 @@
+Data: 29/07/2022
+
+Link para Download do Git: https://git-scm.com/downloads
+O Git Bash é um Terminal extendindo para otimizar o uso do Git.
+
+Alguns comandos aprendidos 
+
+git-init - Cria um repositório Git vazio ou reinicializa um existente;
+git-status - Mostra o status da árvore de trabalho;
+git-add - Adiciona o conteúdo do arquivo ao índice;
+git-commit - Grava alterações no repositório;
+git-commit -m - Grava e adciona uma mensagem;
+git-push - Atualiza referências remotas junto com objetos associados;
+git-push origin main - Envia todos os commits localmente para a nuvem;
+
+$ git config --global user.name "Fulano de Tal": - configurar seu nome de usuário;
+$ git config --global user.email fulanodetal@exemplo.br: - configurar seu endereço de e-mail;
+git config --list: - Lista todas as configurações que o Git conseguir encontrar;
