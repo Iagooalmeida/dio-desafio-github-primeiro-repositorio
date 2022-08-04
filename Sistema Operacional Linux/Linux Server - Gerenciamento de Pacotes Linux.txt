@@ -1,0 +1,26 @@
+Gerenciamento de pacotes (UBUNTU-DEBIAN)
+
+Comamdos:
+1 - apt-get: Permite a instalação, atualização e remoção de pacotes do sistema;
+2 - apt: Ferramentas usadas para instalar, atualizar, remover e gerenciar pacotes de software;
+3 - apt list: Verifica quais pacotes disponiveis para baixar;
+4 - apt list --installed: Mostra os pacotes que eu tenho na minha máquina;
+5 - apt list --upgradable: Mostra os programas que tem atualizações;
+6 - apt search samba: Procura por aplicação de servidor de arquivos;
+7 - wget link_download: Permite realizar downloads para o linux;
+8 - apt install unzip: Instala o descompactador de arquivo zipado;
+9 - unzip arquivo.zip: Descompacta os arquivos zipado;
+10 - apt get remove: Desinstala um programa;
+11 - apt edit-sources: link de todos repositórios do ubuntu 
+
+________________________________________________________________________________
+
+Atualização do sistema operacional
+
+Comandos:
+1 - apt update: Atualiza os pacotes da lista;
+2 - apt upgrade: Atualiza o sistema Operacional;
+3 - hostnamectl: Mostra as configuração de versão da máquina;
+4 - lsb_release -a: Mostra as configuração de versão da máquina;
+
+________________________________________________________________________________
