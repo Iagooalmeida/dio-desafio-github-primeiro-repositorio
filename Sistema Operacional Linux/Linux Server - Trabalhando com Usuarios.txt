@@ -1,0 +1,101 @@
+Comandos Linux
+
+criação de usuários
+
+useradd username: Criação de Usuário;
+useradd username -m -c "Descrição": Criar usuário, (-m)diretório home e (-C)adciona comantário;
+passwd username senha: Cria a senha do usuário;
+chsh -s /bin/bash nome: Indica o shell que o usuário vai usar;
+userdel -r -f username: exclui o usuário, (-r)remove diretório, (-f)força o comando;
+useradd username -m -c "Descrição" (-s)indicar o shell no usuário;
+
+__________________________________________________________________________________________
+
+
+Editando Informações do Usuário
+
+useradd username -m -c (-e)Data de expiração do usuário;
+usermod username: Comando para fazer alteração do usuário;
+passwd username (-e)Data de expiração da senha usuário;
+cat /etc/passwd: acessa informações dos usuários na máquina;
+
+__________________________________________________________________________________________
+
+Shell Script - Criando usuários em lote
+
+useradd username -c -s /bin/bash -m (-p $(openssl passwd -crypt senha)) adciona Crytografa;
+
+Criando um arquivo script - criar_user.sh
+
+#!/bin/bash
+
+echo "Criando usuários do sistema...."
+
+useradd guest10 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -aixmd5 Senha123)
+passwd guest10 -e
+
+useradd guest11 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -aixmd5 Senha123)
+passwd guest11 -e
+
+useradd guest12 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -aixmd5 Senha123)
+passwd guest12 -e
+
+useradd guest13 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -aixmd5 Senha123)
+passwd guest13 -e
+
+echo "Finalizando!!!"
+
+.\nome-arquivo: para execultar o arquivo
+
+_____________________________________________________________________________________________
+
+Adcionado usuario em grupos
+
+Diretório cat /etc/group; Visualizar os grupos de usuários;
+Comando usermod -G Nome_Grupo username; Adcionar usuário em grupos;
+Comando usermod -G Nome_Grupo username(já em um grupo); transfere usuário de grupos;
+
+Criando novos grupos
+
+Comando groupadd group_name: Criando grupo;
+        groupdel nome_grupo: Excluido grupo;
+	   gpasswd -d username nome_grupo: Remove usuário de um grupo só;
+
+_____________________________________________________________________________________________
+
+Conhecendo permissões de sistemas
+
+R  W  X | R  W  X | R  W  X |
+  Dono     Grupo    Outros
+
+R - Read(Leitura)
+W - Write(Gravação)
+X - Exexute(Exexução)
+
+chown username:Group_name /Diretório ou arquivo/: Mudando proprietário (usuário,grupo);
+
+__________________________________________________________________________________________
+
+Alterando as permissões de diretórios - arquivos
+
+Leitura (R)	4
+Gravação (W)	2
+Execução (X)	1
+Nenhuma		0
+
+Comando chmod 421: alterar permissão;
+
+__________________________________________________________________________________________
+
+
+Permissões de exexução para script
+
+Passo-passo
+1. Criar e entrar no diretório com scripts;
+2. Criar arquivos exemplo: date.sh;
+3. Sempre Referenciar com #!/bin/bash;
+4. Após editar e salvar, mudar permissão;
+5. Comando chmod 744 para poder execultar;
+6. .\arquivo para execultar o script;
+7. Comando chmod +x para adcionar permissão de execução ao dono;
+8. Comando chmod -x para retirar permissão de execução ao dono;
