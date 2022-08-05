@@ -1,0 +1,47 @@
+Sistemas de Arquivos
+
+Sistema Operacional		|	Sistema de arquivos
+MacOS				|	HFS
+Unix/Linux			|	Ext3,Ext4,XFS
+Windows				|	FAT32, NTFS
+________________________________________________
+
+Comando Identificar Disco sistema linux
+_______________________________________
+
+01 - lsblk: Exibe as informações de disco;
+02 - fdisk -l: Exibe as informações de disco com mais detalhe;
+
+Particionando discos via terminal
+_________________________________
+
+01 - fdisk /dev/sdb/: comando para particionar disco;
+02 - Digite n para criar uma nova particão.
+03 - Digite p para criar uma partição primario;
+04 - Informe de (1-4 1Default) selecionar o numero de partição;
+
+Formatando o disco via terminal
+_______________________________
+
+01 - mkfs.ext4 /dev/sdb: Escolher o sistema de arquivo ext4;
+02 - Digite y para confirmar e formatar o disco;
+
+Montar e desmontar o Disco
+__________________________
+
+01 - cd /mnt/: para ir ao local onde será montado o disco;
+02 - mkdir {diretório}: criando o diretório {Name};
+03 - mount /dev/sdb /mnt/{diretório}: para montar o disco;
+04 - umount /dev/sdb: para desmontar o disco no diretório;
+
+Montando o disco automaticamente
+________________________________
+
+01 - usar o comando lsblk para verificar onde o disco foi montado;
+02 - nano /etc/fstab: abrir arquivo de configuração de disco automatico;
+03 - adcionar para cada disco novo /dev/sbd /{diretório} ext4 defaults 0 0;
+04 - Salvar as novas informações; 
+
+
+
+
