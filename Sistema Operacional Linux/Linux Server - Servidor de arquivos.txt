@@ -1,0 +1,29 @@
+Instalação do SAMBA e configuração inicial, mais servidor WEB;
+
+1 - Comando de Instalação do Samba.
+-> apt search samba para procurar aquivos que possa ser instalado;
+-> apt install samba -y / para fazer a instalação;
+-> -y para fazer a instalação sem responder perguntas;
+2 - Configurar samba pelo arquivo smb.conf;
+-> nano /etc/samba/smb.conf;
+-> Salvar;
+-> editar o final arquivo:
+	[publica] - Nome do compartilhamento
+	path = /disk/{diretório} - caminho do diretório;
+	writable = yes - liberar para que possa gravar na pasta;
+	guest ok = yes - esta tudo ok os convidados acessarem a pasta;
+	guest only = yes - falar que todo mundo é convidado;
+-> Salvar
+3 - Reiniciar os serviços do samba.
+-> Comando systemctl restart smbd;
+-> final d de daemon, aplicação em segundo plano;
+-> Comando systemctl status smbd - verificar status do servidor;
+-> Comando systemctl enable smbd - iniciar servidor de arquivos;
+
+Instalando servidor WEB
+
+4 - Instalando o apache2.
+-> comando de instalação: apt install apache2;
+-> Comando para reiniciar serviço: systemctl reboot apache2;
+-> Comando de verificação: systemctl status apache2;
+-> Diretório HTML: cd /var/www/html/[index.html];   

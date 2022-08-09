@@ -1,0 +1,18 @@
+O que é um serviço de banco de dados
+
+1) Comando para instalação MySql: apt install mysql-server-8.0 -y;
+-> comando para verificação: apt search mysql-server;
+2) Comando para acessar o banco de dados: mysql -u username -p
+-> -u username para logar com o usuário no banco mysql
+-> -p Inserir a senha para logar no banco de dados;
+
+Alguns comandos de banco de dados.
+1 - comando para criar o banco: Create database name;
+2 - comando para visualizar o banco: show databases;
+3 - Entrando na tabela no banco: use nome_banco;
+4 - Criando a tabela: create table name (parametros int, name(tipo));
+5 - Mostrar as tabelas criadas: show table;
+6 - Visualizar os dados no banco: select * FROM nametable;
+7 - Sair do banco de dados: comando exit; 
+
+

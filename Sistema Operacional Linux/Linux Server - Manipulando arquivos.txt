@@ -1,0 +1,45 @@
+Manipulando arquivos no servidor Linux
+
+Comando cp(copy) para copiar um ou mais arquivos;
+1 - ls /{diretório} para verificar o que vai ser copiado;
+2 - ls {diretório} verificar para qual diretório vai ser copiado;
+3 - cp {diretório origem}[arquivo] para {diretório de destino};
+4 - cp {diretório origem} *.{extenção do arquivo} para {diretório de destino};
+-> Comando acima para copias arquivos com a mesma extenção;
+5 - cp ./a* {dir-destino}para copiar todos os arquivos que começam com letra a;
+-> usar cp com o -i para avisar quando um arquivo sobrepor o outro;
+-> - cp com o -r copia todo os diretórios e subdiretório;
+6 - cp {origem}* {destino} -r -v para copiar e listar o que foi copiado;
+
+_______________________________________________________________________________
+
+Renomeando Movendo arquivos
+
+Comando mv(move) para mover arquivo de lugar.
+1 - mv {diretório origem}[arquivo] para {diretório de destino};
+-> para mover um arquivo de diretório para o outro;
+2 - mv {diretório origem}[*] para {diretório de destino} -i -v;
+-> Para mover todos os arquivos de um diretório.
+-> -i alerta caso um arquivo sobrepõem o outro.
+-> -v lista os arquivos que foram movidos.
+3 - mv (arquivos) (mudar_nome_arquivo);
+-> comando para renomear arquivos.
+
+_______________________________________________________________________________
+
+Iniciando, visualizando e encerrando um processo.
+
+1 - ps aux: mostra os processos ativos na máquina;
+-> Opção a mostra os processos de todos usuários.
+-> Opção u Fornece o nome e a hora do usuário que iniciou o processo.
+-> Opção x Processos que foram executados fora do console(Terminal).
+2 - kill mais o numero do PID: mata um processo;
+-> killall nome: mata todos os processos de uma aplicação.
+3 - Digite w para listar os usuários logado.
+-> who -a: para mostrar o PID do usuário.
+
+
+
+
+
+
